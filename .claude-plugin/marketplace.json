@@ -1,5 +1,5 @@
 {
-  "$schema": "https://cdn.jsdelivr.net/gh/anthropics/claude-code@latest/marketplace.schema.json",
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "teob-method",
   "description": "The Outside-In Method — derive a system from what is outside it, or audit one that already exists",
   "owner": {

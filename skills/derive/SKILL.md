@@ -81,6 +81,8 @@ Only the writes that genuinely need reservation or completion belong in the stri
 
 Every figure carries a label: **measured** · **contractual** · **assumed**. Every assumed figure becomes a risk-register entry naming the decision it supports.
 
+**A mechanism may cite a decision instead of a constraint — then name the decision, and justify *that*.** Nothing partitions itself: a partitioned store was bought by a volume that did not fit one machine, a leader with elections by clients who tolerate no maintenance window. Write the parent down at the moment you take the child, because the chain is checked to its root later either way, and reconstructing it afterwards is the expensive version.
+
 **Never invent a number silently.** If the user has not given you a volume, say so, propose one explicitly as assumed, show what it changes, and continue. A design built on unlabelled invented numbers is worse than one with gaps, because the gaps are visible.
 
 **Every figure must be consumed.** Do not leave step 01 with a number that no later step divides, bounds or decides with. Name the step that will use each one; where there is none, either the figure goes or the decision it should have informed was missed. A volume elicited in the first five minutes and never divided by anything is a question that should not have been asked, and it is the commonest defect in system design writing — the arithmetic looks done because the numbers are on the page.

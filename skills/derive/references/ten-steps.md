@@ -101,6 +101,8 @@ Detection proportioned to consequence — how badly a client is hurt, and where 
 ### 10 · Trace
 **Asks** Does every mechanism cite a requirement, and every requirement map to a mechanism?
 
-**Deliverable** The traceability map. Uncited mechanism → delete, surface a missing requirement, or declare self-derived naming its parent decision. Unmapped requirement → a gap; design for it. Unconsumed figure → a number collected at 01 that nothing here consumes; drop it, or name the decision it should have informed.
+**Deliverable** The traceability map. Unmapped requirement → a gap; design for it. Unconsumed figure → a number collected at 01 that nothing here consumes; drop it, or name the decision it should have informed.
+
+**A mechanism citing no client constraint takes the first disposition that applies — a search, not a menu.** ① **Delete** — nothing sits above it. ② **Surface a missing requirement** — tracing it lands on a client constraint that was always true and never written down; the common case, and often a *different* constraint from the one that bought the parent. ③ **Declare self-derived, naming the parent decision** — and the parent now faces the same test. Naming a parent moves the obligation up, it does not discharge it. Citations chain; the recursion ends at a client constraint or the finding sits at the root, and **a five-deep chain on an ungrounded adjective is one finding, not five.** Record the chain's root, depth and the link at which it stops tracing.
 
 **Re-run trigger.** A zero-tolerance count that keeps firing is not an ops problem — it is a signal to re-run the derivation from step 03, because the source of truth was modelled wrong.

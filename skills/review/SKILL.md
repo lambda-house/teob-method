@@ -73,7 +73,7 @@ For each component: *which constraint's removal would delete this?*
 
 | Posture | The artifact is | The test is | Report an uncited mechanism as |
 |---|---|---|---|
-| **Greenfield** | A design not yet built | A razor | Delete it, or surface the requirement it implies |
+| **Greenfield** | A design not yet built | A razor | Take the first disposition that applies: **delete** · **surface a missing requirement** (the common case) · **declare self-derived, naming the parent** — which puts the parent under the same test |
 | **Brownfield** | A running system | Chesterton's fence — the reason may exist undocumented, or have expired | *"No recorded reason — confirm before removing."* Recommend an incremental cutover, never a deletion |
 | **Didactic** | A worked example whose purpose is to demonstrate the mechanism | Inverted | *"The stated requirement cannot discriminate this mechanism."* The finding is against the requirement, not the mechanism |
 
@@ -231,7 +231,7 @@ Close with **the three most expensive findings**, in one sentence each.
 - **Do not report a finding you cannot demonstrate.** Show the arithmetic, quote the document, or drop it.
 - **Say what you could not check.** A review that silently skipped the storage layer reads as a review that cleared it.
 - Where the artifact is thin, the finding is the thinness — not an excuse to fill it in from a reference architecture.
-- **Record a self-derived chain; do not adjudicate it.** Root, depth, weakest link, whether the root is a client constraint. What the chain is worth is the human's decision.
+- **Adjudicate the chain's root; leave its worth to the human.** Two different questions. *Does the chain reach a client constraint?* is mechanical — follow it and report the root, the depth, and the link at which it stops tracing. *Is this mechanism worth its cost?* is not yours. Report the finding **at the break, once**: a five-deep chain standing on an ungrounded adjective is one finding against the adjective, not five against the mechanisms, and each link may be perfectly derived from the one above it.
 - **Do not report a ratio you have not divided.** "Oversized" without the division is taste, and taste arguments get settled by seniority.
 
 ## References

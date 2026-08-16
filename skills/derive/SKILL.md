@@ -63,6 +63,8 @@ Doing capacity first is how a design ends up with a coordination protocol betwee
 
 **Do the division in both directions.** Compute what one node can serve before deciding you need many. Most systems fit on fewer nodes than the shape suggests, and the extra nodes are then justified by failover — which is a *stated reason*, not a silent one.
 
+**Divide at the moment you choose, not in review.** Citing a constraint is not enough. Record what the constraint demands, what the mechanism supplies, and the ratio between them. Near 1 is sized to the job. In the tens is headroom, and you must name the factor — growth, peak, or failover. In the hundreds means the citation is decorative and the shape came from a reference architecture; the mechanism is not wrong so much as unjustified at that size. The ratio costs one line at the moment of choice, and a re-derivation to recover afterwards.
+
 ## Acknowledgements scope the expensive store
 
 Ask of every write: **if this call returned "probably", would the next screen be a lie?**
@@ -80,6 +82,8 @@ Only the writes that genuinely need reservation or completion belong in the stri
 Every figure carries a label: **measured** · **contractual** · **assumed**. Every assumed figure becomes a risk-register entry naming the decision it supports.
 
 **Never invent a number silently.** If the user has not given you a volume, say so, propose one explicitly as assumed, show what it changes, and continue. A design built on unlabelled invented numbers is worse than one with gaps, because the gaps are visible.
+
+**Every figure must be consumed.** Do not leave step 01 with a number that no later step divides, bounds or decides with. Name the step that will use each one; where there is none, either the figure goes or the decision it should have informed was missed. A volume elicited in the first five minutes and never divided by anything is a question that should not have been asked, and it is the commonest defect in system design writing — the arithmetic looks done because the numbers are on the page.
 
 ## Stop rules — taking them is the method working
 

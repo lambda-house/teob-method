@@ -22,12 +22,16 @@ Every tolerance names the conditions it holds under. "p99 200 ms" and "p99 200 m
 
 **Deliverable** A client-class table carrying tolerances, the view list with a freshness bound each, and the accepted degraded outcomes — plus an operating-envelope table. These are the **joint-signature artifacts**: everything the business half of the organisation can read, check and correct lives here, and nothing client-visible is decided after this step.
 
+**Exit condition — no figure leaves this step unconsumed.** Beside each volume, name the later step that will divide, bound or decide with it. A figure with no named consumer is a question that should not have been asked: drop it, or find the decision it was standing in for. Checked again at 02, reported at 10.
+
 ### 02 · Load
 **Asks** What does the stated demand actually amount to?
 
 Requests/second (average and peak, with the peak factor stated) · bytes/day and bytes/year · working-set size · fan-out · growth over the horizon you are designing for.
 
 **Deliverable** The demand arithmetic, shown as division, with every input labelled measured / contractual / assumed. **No technology named yet.**
+
+Every figure elicited at 01 is either divided here or explicitly carried to a named later step. One still unconsumed at 10 is a finding against 01, not against this step.
 
 ---
 
@@ -46,6 +50,8 @@ Take the step-01 view list and its bounds — they are promises and are not revi
 Match store family to access pattern. Declare all six channel properties per edge. Then granularity: runtime units, module seams, repo topology — each split citing a force.
 
 **Deliverable** The labelled graph: every node typed, every edge annotated.
+
+**Record the ratio beside the citation.** Per choice: what the citing requirement demands against what the mechanism supplies. Near 1 is sized to the job; tens are headroom and must name the factor — growth, peak, failover; hundreds mean the requirement cannot discriminate the choice, and the choice came from somewhere other than this derivation.
 
 ### 05 · Trust
 **Asks** Where are the boundaries, and what is enforced at each?
@@ -95,6 +101,6 @@ Detection proportioned to consequence — how badly a client is hurt, and where 
 ### 10 · Trace
 **Asks** Does every mechanism cite a requirement, and every requirement map to a mechanism?
 
-**Deliverable** The traceability map. Uncited mechanism → delete, surface a missing requirement, or declare self-derived naming its parent decision. Unmapped requirement → a gap; design for it.
+**Deliverable** The traceability map. Uncited mechanism → delete, surface a missing requirement, or declare self-derived naming its parent decision. Unmapped requirement → a gap; design for it. Unconsumed figure → a number collected at 01 that nothing here consumes; drop it, or name the decision it should have informed.
 
 **Re-run trigger.** A zero-tolerance count that keeps firing is not an ops problem — it is a signal to re-run the derivation from step 03, because the source of truth was modelled wrong.

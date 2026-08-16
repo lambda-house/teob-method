@@ -57,3 +57,8 @@ Rank findings by cost, not by how easy they were to spot:
 - Do not rule on a self-derived chain. Record root, depth, weakest link and whether the root is a client constraint; the human decides what it is worth.
 - Do not call a mechanism oversized without the division. Record the ratio, or drop the finding.
 - Do not report on what you could not see. State the coverage limit and mark the findings a legible diagram could overturn.
+
+## Two substitutions to refuse
+
+- **The impressive figure for the deciding figure.** Before accepting any arithmetic, list the promises and ask which figure each one waits on. A design that computes its largest quantity and not its binding one has done arithmetic, not sizing.
+- **The mechanism-health metric for the promise counter.** If the promise were violated right now, would this number move? If not, the promise is uncounted however many dashboards exist.

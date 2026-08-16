@@ -144,9 +144,10 @@ A design that names a technology before pass 1 has decided by reference architec
 Then ask two questions of every figure, in this order:
 
 1. **Is this the quantity the decision needs?** An entitlement — users × quota — is not a storage requirement; the requirement is what they actually store per day. One design computes 500 PB of entitlement exactly, against a real consumption of 10 TB/day that takes 137 years to reach it, and sizes its storage against the wrong one.
-2. **Does it compute?** Recompute independently before reading the stated answer.
+2. **Is this the figure that decides something?** Arithmetic drifts toward whichever quantity is most impressive or most tractable, and neither is reliably the one a decision waits on. Two directions, both seen: a design computes a media volume of tens of petabytes nowhere and its availability table — six orders of magnitude smaller — twice, because the small one is easy; another computes a petabyte a day of stored originals and never the few terabytes of thumbnails that carry *all* of its stated latency requirement, because the large one is impressive. **Ask what each promise waits on, and check that a figure exists for it.**
+3. **Does it compute?** Recompute independently before reading the stated answer.
 
-**A correct answer to the wrong division is more dangerous than an arithmetic error, because it survives checking.** The error gets caught by the next reader. The wrong quantity gets quoted.
+**A correct answer to the wrong division is more dangerous than an arithmetic error, because it survives checking.** The error gets caught by the next reader. The wrong quantity gets quoted. And a figure that is correct, relevant *and* aimed at the wrong order of magnitude passes every check except the one that asks what it was for.
 
 ### 8 · Enumerate the zero-tolerance promises
 
@@ -156,7 +157,8 @@ For each — the promise, the mechanism carrying it, that mechanism's failure mo
 
 - **A percentile attached to a zero-tolerance promise is already a finding.** "99.9% of opt-outs honoured" is a commitment to violate consent a thousand times per million.
 - **A single unguarded mechanism.** One filter, one flag check, one callback. Ask what happens when it is down, skipped, or raced. A consent check that runs *before* a queue and never again does not survive an opt-out during the retry window; a status flipped by a callback that never arrives stays pending forever.
-- **No counter.** A promise whose count must be zero and which nothing counts is unfalsifiable in production. That is a specific observability finding with a named owner, not a general plea for more metrics.
+- **No counter.** A promise whose count must be zero and which nothing counts is unfalsifiable in production. That is a specific observability finding with a named owner, not a general plea for more metrics. **The Counter column is never left blank** — write *"none — finding"*, because an empty cell reads as unchecked and a stated absence reads as a result.
+- **A metric that measures the mechanism working is not a counter for the promise.** These are easy to mistake for each other and the substitution is common. A reservation system that promises never to double-book, and monitors *rejected booking attempts*, is measuring lock contention — evidence the enforcer is doing its job — and counting double-bookings nowhere. Ask of every candidate metric: if this promise were violated right now, would this number move?
 
 ### 9 · Check the adjacent areas
 

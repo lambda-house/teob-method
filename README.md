@@ -3,8 +3,8 @@
 Two skills that carry a system design method your agent can run against **a system
 you already have**, not a curated example.
 
-Full method, worked example and fourteen applied walks across two system design
-books: **<https://teob.cc/method>**
+Full method, worked example and eight derivations — the method indexed by what it
+does, each proved on the systems where it bites: **<https://teob.cc/method>**
 
 ## Install (Claude Code)
 

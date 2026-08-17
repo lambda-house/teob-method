@@ -87,6 +87,10 @@ Every figure carries a label: **measured** · **contractual** · **assumed**. Ev
 
 **Every figure must be consumed.** Do not leave step 01 with a number that no later step divides, bounds or decides with. Name the step that will use each one; where there is none, either the figure goes or the decision it should have informed was missed. A volume elicited in the first five minutes and never divided by anything is a question that should not have been asked, and it is the commonest defect in system design writing — the arithmetic looks done because the numbers are on the page.
 
+## Amending an existing derivation
+
+If the user brings a design that already exists and one thing has changed, **do not re-run the ten steps.** A store is a role with constraints; a given technology is one thing sufficient to play it, and when constraints move only the *sufficiency claim* expires. Name the claim that died, re-check the rows the change actually touches, and say explicitly what it does not touch — the second half is what stops a scared team re-opening everything. `references/ten-steps.md` carries the table. Two rules on top of it: **client tolerances do not move because the budget shrank** (that is a finding to escalate with numbers, not a promise to lower quietly), and an amendment to a joint-signature artifact **is void until it is signed again**.
+
 ## Stop rules — taking them is the method working
 
 The full pass is an afternoon, and it earns that when there are several client classes, real scale questions or regulated data. A single-class CRUD service on one database deserves **Outside, Data and Trace** in fifteen minutes.

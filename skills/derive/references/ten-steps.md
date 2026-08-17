@@ -106,3 +106,31 @@ Detection proportioned to consequence — how badly a client is hurt, and where 
 **A mechanism citing no client constraint takes the first disposition that applies — a search, not a menu.** ① **Delete** — nothing sits above it. ② **Surface a missing requirement** — tracing it lands on a client constraint that was always true and never written down; the common case, and often a *different* constraint from the one that bought the parent. ③ **Declare self-derived, naming the parent decision** — and the parent now faces the same test. Naming a parent moves the obligation up, it does not discharge it. Citations chain; the recursion ends at a client constraint or the finding sits at the root, and **a five-deep chain on an ungrounded adjective is one finding, not five.** Record the chain's root, depth and the link at which it stops tracing.
 
 **Re-run trigger.** A zero-tolerance count that keeps firing is not an ops problem — it is a signal to re-run the derivation from step 03, because the source of truth was modelled wrong.
+
+---
+
+## Who signs which artifact
+
+The ten steps emit a contract and a set of working notes. Say which is which, or the business half argues about topology and the engineering half quietly moves a promise. The boundaries are not the step boundaries.
+
+| Category | Artifacts |
+|---|---|
+| **The business supplies** | The operating envelope — capability, hosting posture, contracts held, cost envelope, team topology, jurisdictions, lifecycle |
+| **Both sign** | Client classes and quotas · every tolerance with its conditions · accepted degraded outcomes · zero-tolerance counts · **the shed order** · cost per request · retention and erasure commitments · published SLOs |
+| **Engineering owns** | Primitive typing and the graph · store families · the six channel properties · capacity arithmetic, ratios, headroom · derivation and merge semantics · runtime and placement |
+
+The traceability map is joint **column by column**: *Requirement* both sign, *Mechanism* engineering owns, *Verified by* both sign again. The shed order looks like an implementation detail and is a commercial decision — whoever owns the revenue owns it.
+
+## Amendment — the model is living, not re-derived
+
+Constraints move. The model was not wrong: a store is a **role with constraints**, and a given database is one thing *sufficient* to play it. When constraints change, only the **sufficiency claim** expires. Name the claim that died; do not redo the derivation.
+
+| What changed | Re-check | Explicitly untouched |
+|---|---|---|
+| New client class | Its tolerances, quota, shed-order position, the surfaces it touches; ladder gains a row | Data classes, invariants, the source of truth |
+| A tolerance tightens | The derivation producing that view; possibly the store under it; the alarm set at half the old bound | Client classes, invariants, the cost envelope |
+| A volume moves 10× | Demand arithmetic and everything citing it — node counts, **partition counts**, recorded ratios | Tolerances, invariants, acknowledgement semantics |
+| An invariant is added | Enforcer, serialisation point for its contended unit, ack semantics on that write path | Everything not touching that invariant |
+| Operating envelope shrinks | Store choices, placement, granularity, buy-vs-build; run the subtraction test for real | **Client tolerances** — they do not move because you got poorer; that is a finding to escalate with numbers |
+
+**An amendment to an engineering-owned artifact needs no counter-signature. An amendment to a joint-signature artifact is void until signed again**, because it is a promise with a price. The only change that buys a genuine re-derivation is the re-run trigger above. Write the amendment where the original decision lives, with the date and the claim that expired.
